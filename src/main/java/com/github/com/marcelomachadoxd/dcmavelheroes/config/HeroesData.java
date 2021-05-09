@@ -1,5 +1,8 @@
 package com.github.com.marcelomachadoxd.dcmavelheroes.config;
 
+
+import static com.github.com.marcelomachadoxd.dcmavelheroes.constants.HeroesConstat.ENDPOINT_DYNAMO;
+import static com.github.com.marcelomachadoxd.dcmavelheroes.constants.HeroesConstat.REGION_DYNAMO;
 import com.amazonaws.auth.AWSCredentials;
 import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.auth.BasicSessionCredentials;
@@ -31,7 +34,7 @@ import java.util.Arrays;
 public class HeroesData {
     public static void main(String[] args) throws Exception{
         AmazonDynamoDB client = AmazonDynamoDBClientBuilder.standard()
-            .withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration())
+            .withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(ENDPOINT_DYNAMO, REGION_DYNAMO))
             .build();
 
         DynamoDB dynamoDB = new DynamoDB(client);
