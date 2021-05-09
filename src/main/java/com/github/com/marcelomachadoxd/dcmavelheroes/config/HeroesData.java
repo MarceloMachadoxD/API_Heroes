@@ -46,6 +46,24 @@ public class HeroesData {
 
         PutItemOutcome outcome = table.putItem(hero);
 
+        Item hero2 = new Item()
+            .withPrimaryKey("id",2)
+            .withString("name","Mulher Maravilha")
+            .withString("universe", "DC Commics")
+            .withNumber("Filmsqty",2);
+
+         outcome = table.putItem(hero2);
+
+
+        Item hero3 = new Item()
+            .withPrimaryKey("id",3)
+            .withString("name","Justiceiro")
+            .withString("universe", "Marvel Commics")
+            .withNumber("Filmsqty",2);
+
+        outcome = table.putItem(hero3);
+
+
     }
 
 }
