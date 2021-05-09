@@ -1,0 +1,13 @@
+package com.github.com.marcelomachadoxd.dcmavelheroes;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class DcMavelHeroesApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(DcMavelHeroesApplication.class, args);
+    }
+
+}
